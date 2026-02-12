@@ -5,7 +5,7 @@ In this repository all datasets generated from Resilmesh System v2 - Pilot 2 wil
 Here is described the communication flows considered normal within the infrastructure, as represented by the arrows in the architecture diagram below. These flows define the **expected behavior** of the system under regular operating conditions and serve as a baseline for detecting anomalies or malicious activity.
 
 ### Infrastructure Architecture & Data Flow
-![Architecture Diagram](assets\ICERT_env.png)
+![Architecture Diagram](assets/ICERT_env.png)
 
 The architecture consists of three main zones: Customer1 (where our cyber monitoring probe is installed), Backend, Yomi Sandbox (Our Sandbox. This includes the Virtualization environment). The following describes the normal traffic flow between the components:
 
