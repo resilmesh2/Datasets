@@ -1,5 +1,15 @@
 # Datasets
-In this repository all datasets generated from Resilmesh System v2 - Pilot 2 will be added.
+In this repository all datasets generated from the use case partners involved in the pilot of the Resilmesh System.
+
+## 📊 Project Datasets
+
+Below is a list of the datasets used for the Pilot 1 and 2 validation. You can download them directly using the links in the table:
+
+| Dataset Name | Description | Format | Direct Download |
+| :--- | :--- | :--- | :--- |
+| **Alias Datasets** | Normal traffic captures for IoT Domain behavioral baseline. | `RAR` | [⬇️ Download](/ALIAS/Preprocessed_Pcaps/Alias_events.rar) |
+| **ICERT Datasets** | Normal traffic captures for IT Domain behavioral baseline. | `RAR` | [⬇️ Download](https://tu-servidor.com/datasets/baseline.pcap) |
+| **CARM Datasets** | Normal traffic captures for Domain behavioral baseline. | `RAR` | [⬇️ Download](https://tu-servidor.com/datasets/enriched.json) |
 
 # InfoCert - Traffic overview
 Here is described the communication flows considered normal within the infrastructure, as represented by the arrows in the architecture diagram below. These flows define the **expected behavior** of the system under regular operating conditions and serve as a baseline for detecting anomalies or malicious activity.
