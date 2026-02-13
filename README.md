@@ -7,8 +7,8 @@ Below is a list of the datasets used for the Pilot 1 and 2 validation. You can d
 
 | Dataset Name | Description | Format | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **Alias Datasets** | Normal traffic captures for IoT Domain behavioral baseline. | `RAR` | [⬇️ Download](https://github.com/resilmesh2/Datasets/raw/refs/heads/main/ALIAS/Preprocessed_Pcaps/Alias_events.rar) |
-| **ICERT Datasets** | Normal traffic captures for IT Domain behavioral baseline. | `RAR` | [⬇️ Download](https://tu-servidor.com/datasets/baseline.pcap) |
+| **Alias Datasets** | Normal traffic captures for IoT Domain behavioral baseline. | `RAR` | [⬇️ Download]() |
+| **ICERT Datasets** | Normal and malicious traffic captures for IT Domain behavioral baseline. | `ZIP` | [⬇️ Download](https://zenodo.org/api/records/18630966/files-archive) |
 | **CARM Datasets** | Normal traffic captures for Domain behavioral baseline. | `RAR` | [⬇️ Download](https://tu-servidor.com/datasets/enriched.json) |
 
 # InfoCert - Traffic overview
