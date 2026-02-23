@@ -7,7 +7,7 @@ Below is a list of the datasets used for the Pilot 1 and 2 validation. You can d
 
 | Dataset Name | Description | Format | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **Alias Datasets** [👁️ More info](https://github.com/resilmesh2/Datasets?tab=readme-ov-file#alias---traffic-overview) | Normal traffic captures for IoT Domain behavioral baseline. | `ZIP` | [⬇️ Download]() |
+| **Alias Datasets** [👁️ More info](https://github.com/resilmesh2/Datasets?tab=readme-ov-file#alias---traffic-overview) | Normal traffic captures for IoT Domain behavioral baseline. | `ZIP` | [⬇️ Download](https://zenodo.org/api/records/18740682/files-archive) |
 | **ICERT Datasets** [👁️ More info](https://github.com/resilmesh2/Datasets?tab=readme-ov-file#infocert---traffic-overview) | Normal and malicious traffic captures for IT Domain behavioral baseline. | `ZIP` | [⬇️ Download](https://zenodo.org/api/records/18630966/files-archive) |
 | **CARM Datasets** [👁️ More info](https://github.com/resilmesh2/Datasets?tab=readme-ov-file#carm---traffic-overview) | Normal traffic captures for Domain behavioral baseline. | `ZIP` | [⬇️ Download]() |
 
