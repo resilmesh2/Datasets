@@ -76,7 +76,35 @@ Here is described the communication flows considered normal within the ALIAS ind
 
 ### Infrastructure Architecture & Data Flow
 
-![Architecture Diagram](assets/ALIAS_env.png)
+```
+                        ┌─────────────────────────────────────────────────────────────────┐
+                        │                Docker Bridge Network  172.19.0.0/24             │
+                        │                                                                 │
+  ┌──────────────────┐  │  ┌──────────────────┐    ┌──────────────┐    ┌───────────────┐  │
+  │   Host Machine   │  │  │   ROS1 Noetic    │    │  ROS Bridge  │    │   ROS2 Foxy   │  │
+  │                  │  │  │   172.19.0.3     │    │  172.19.0.5  │    │  172.19.0.4   │  │
+  │  ┌────────────┐  │  │  │                  │    │              │    │               │  │
+  │  │ tshark     │──┼──┼──│  roscore :11311  │◄──►│  dynamic_    │◄──►│  DDS/RTPS     │  │
+  │  │ (PCAP)     │  │  │  │  /rosout         │    │  bridge      │    │  :7400+       │  │
+  │  ├────────────┤  │  │  │  /chatter @1Hz   │    │  (all topics)│    │  /rosout      │  │
+  │  │ snmpget    │──┼──┼──│  SNMP :161       │    │              │    │  SNMP :161    │  │
+  │  │ (SNMPv2c)  │  │  │  └──────────────────┘    └──────────────┘    └───────────────┘  │
+  │  └────────────┘  │  │                                                                 │
+  │                  │  │  ┌──────────────────┐    ┌──────────────┐    ┌───────────────┐  │
+  │  Collects:       │  │  │   OpenPLC        │    │ UR Dashboard │    │   Attacker    │  │
+  │  - 23 SNMP OIDs  │  │  │   172.19.0.2     │    │  172.19.0.6  │    │  172.19.0.7   │  │
+  │    per container  │  │  │                  │    │              │    │               │  │
+  │  - 1 PCAP file   │  │  │  Web UI :8080    │    │  VNC :5900   │    │  ROS1/ROS2    │  │
+  │    per container  │  │  │  SNMP :161       │    │  noVNC :6080 │    │  CLI tools    │  │
+  │                  │  │  │                  │    │  Dashboard   │    │  nmap, curl   │  │
+  │                  │  │  │                  │    │   :29999     │    │               │  │
+  │                  │  │  │                  │    │  SNMP :161   │    │  (active only │  │
+  │                  │  │  │                  │    │              │    │  in malicious │  │
+  │                  │  │  │                  │    │              │    │   dataset)    │  │
+  └──────────────────┘  │  └──────────────────┘    └──────────────┘    └───────────────┘  │
+                        │                                                                 │
+                        └─────────────────────────────────────────────────────────────────┘
+```
 
 The environment consists of six Docker containers on an isolated bridge network (172.19.0.0/24), simulating an industrial robotic cell. The following describes the normal traffic flow between the components:
 
